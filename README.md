@@ -8,6 +8,9 @@ cheat menu?
 server:
 als usr1 arrowup doet dan broadcast de server dit naar iedere usr 
 
+to start:
+node main.js
+
 place food on the map
 
 musts:

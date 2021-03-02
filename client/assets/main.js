@@ -15,15 +15,19 @@ document.querySelector('button').onclick = () => {
     
 }
 
-// Regular Websockets
-
-// const socket = new WebSocket('ws://localhost:8080');
-
-// // Listen for messages
-// socket.onmessage = ({ data }) => {
-//     console.log('Message from server ', data);
-// };
-
-// document.querySelector('button').onclick = () => {
-//     socket.send('hello');
-// }
+document.addEventListener("keydown", function logKey(e) {
+    var key = e.key;
+    if (key == "ArrowUp") {
+        console.log("arrow up");
+        socket.emit('arrow up', key)
+    }
+    if (key == "ArrowDown") {
+        console.log("arrow down");
+    }
+    if (key == "ArrowLeft") {
+        console.log("arrow left");
+    }
+    if (key == "ArrowRight") {
+        console.log("arrow right");
+    }
+});
