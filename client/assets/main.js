@@ -1,4 +1,6 @@
+console.info('js has been planted')
 const socket = io('ws://localhost:8080');
+
 
 socket.on('message', text => {
 
@@ -8,19 +10,25 @@ socket.on('message', text => {
 
 });
 
-document.querySelector('button').onclick = () => {
+// document.querySelector('button').onclick = () => {
 
-    const text = document.querySelector('input').value;
-    socket.emit('message', text) // text is bijv 'hoi'
+//     const text = document.querySelector('input').value;
+//     socket.emit('message', text) // text is bijv 'hoi'
+    
+// }
+let container = document.getElementById("container");
+for (let index = 0; index < array.length; index++) {
+    container.innerHTML += "<div class='cell'></div>";
     
 }
-
-for (var index = 0; 10 < x; index++) {
-    for (var x = 0; 10 < x; x++) {
-        document.getElementById("container").innerHTML += "<div class='cell'></div>";
-    }
-    document.getElementById("container").innerHTML += "<br>";
-}
+// for (var index = 0; 10 < index; index++) {
+//     console.log('papier')
+//     for (var x = 0; 10 < x; x++) {
+//         console.log('steen')
+//         container.innerHTML += "<div class='cell'></div>";
+//     }
+// container.innerHTML += "<br>";
+// }
 
     
 document.addEventListener("keydown", function logKey(e) {
